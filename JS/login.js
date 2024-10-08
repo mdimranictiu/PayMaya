@@ -5,11 +5,15 @@ document.getElementById('login-btn').addEventListener('click', (e) => {
     const pin = document.getElementById('pin-number').value;
     
     const phoneNumber = parseFloat(phone);
+    const pinNumber = parseFloat(pin);
+    console.log(phoneNumber, typeof phoneNumber);
 
     // Compare pin as a string (keeping the original input type)
-    if (phoneNumber === 123456789 && pin === 1234) {
-        window.location.href = 'home.html';
-    } else {
+    if (phoneNumber === 1234 && pinNumber === 1234) {
+        window.location.href='home.html'
+        
+    } 
+    else{
         alert("Mobile Number or Pin Number Error");
     }
 
