@@ -6,6 +6,7 @@
     <title>PayMaya Home</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <main class="flex justify-center mt-24">
@@ -13,11 +14,69 @@
         <div class="camera"></div>
         <div class="display">
           <div class="artboard artboard-demo phone-1">
-            <div class="py-5">
+            <div class="pt-5 ">
                 <div class="w-1/3  mx-auto"><img src="./img/payoo.png" alt=""></div>
                 <h2 class="text-center font-bold	 text-2xl bg-gradient-to-r from-[#56D9E2] to-[#0D5FB5] text-transparent  bg-clip-text">PayMaya</h2>
             </div>
-            <h1>Home</h1>
+            <div class="flex justify-between gap-10 mt-10">
+              <div><h2 class="font-bold text-xl text-[#0D5FB5]">$<span id="availableBalance">4500</span>
+              </h2>
+              <p>Available Balance</p>
+              </div>
+              <button  id="btn-logout" class="btn  btn-">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i> </button>
+            </div>
+           <!-- Welcome Message section -->
+           <div class="mt-4 py-5 px-3 ">
+            <h2 class="text-xl text-center font-bold"><i class="fa-solid fa-fire px-2"></i> Welcome to PayMaya !</h2>
+            <p class="text-center">Enjoy easy and convenient financial services with us.</p>
+          </div>
+            <!-- transaction operation section -->
+            <div class="grid grid-cols-2 pt-5  gap-5 px-3 text-center font-semibold">
+             <div class=" py-5 px-5 bg-gradient-to-r from-[#38b5be] to-[#0D5FB5] shadow-lg rounded-lg text-white shadow-cyan-500/50">
+              <h2>Add Money</h2>
+             </div>
+             <div class=" py-5 px-5 bg-gradient-to-r from-[#38b5be] to-[#0D5FB5] shadow-lg rounded-lg text-white shadow-cyan-500/50">
+              <h2>Cash Out</h2>
+             </div>
+             <div class=" py-5 px-5 bg-gradient-to-r from-[#38b5be] to-[#0D5FB5] shadow-lg rounded-lg text-white shadow-cyan-500/50">
+              <h2>Transfer</h2>
+             </div>
+             <div class=" py-5 px-5 bg-gradient-to-r from-[#38b5be] to-[#0D5FB5] shadow-lg rounded-lg text-white shadow-cyan-500/50">
+              <h2>History</h2>
+             </div>
+             
+             
+            </div>
+            <!-- Add money section -->
+             <div class="hidden">
+              <div class="card bg-base-100 w-full"></div>
+                <form action="#" class="card-body">
+                    <label for="addAmount" >Amount To Add</label>
+                    <input id="addAmount" class="input outline-none border-hidden	" type="text" placeholder="Amount">
+                    <label for="pin">4 Digit Pin</label>
+                    <input id='pin-number' class="input rounded-lg border-hidden	outline-none" type="password" placeholder="Enter 4 Digit Pin" autocomplete="off">
+                    <a href="forgot.html" class="link-hover">Forgot Pin ?</a>
+                    <p id="error" class="hidden text-red-700">Something went Wrong</p>
+                    <button id="addMoneyBtn" class="btn  rounded-r-xl outline-none	 text-base hover:text-[#0874F2] hover:bg-white	  bg-[#0874F2] text-white">Add Money</button>
+                  </form>
+             </div>
+             <!-- Add money section End -->
+              <!-- Cashout money section -->
+             <div class="hidden">
+              <div class="card bg-base-100 w-full"></div>
+                <form action="#" class="card-body">
+                    <label for="cashoutAmount" >Amount To Cashout</label>
+                    <input id="cashoutAmount" class="input outline-none border-hidden	" type="text" placeholder="Amount">
+                    <label for="pincashout">4 Digit Pin</label>
+                    <input id='pin-number-cashout' class="input rounded-lg border-hidden	outline-none" type="password" placeholder="Enter 4 Digit Pin" autocomplete="off">
+                    <a href="forgot.html" class="link-hover">Forgot Pin ?</a>
+                    <p id="error-cashout" class="hidden text-red-700">Something went Wrong</p>
+                    <button id="CashoutBtn" class="btn  rounded-r-xl outline-none	 text-base hover:text-[#0874F2] hover:bg-white	  bg-[#0874F2] text-white">Cashout</button>
+                  </form>
+             </div>
+             <!-- Cashout section End -->
+
+             </div>
             
           </div>
         </div>
@@ -25,3 +84,4 @@
   </main>
 </body>
 </html>
+<script src="./JS/app.js"></script>

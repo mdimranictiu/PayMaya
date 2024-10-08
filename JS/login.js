@@ -6,9 +6,7 @@ document.getElementById('login-btn').addEventListener('click', (e) => {
     
     const phoneNumber = parseFloat(phone);
     const pinNumber = parseFloat(pin);
-    console.log(phoneNumber, typeof phoneNumber);
 
-    // Compare pin as a string (keeping the original input type)
     if (phoneNumber === 1234 && pinNumber === 1234) {
         window.location.href='home.html'
         
